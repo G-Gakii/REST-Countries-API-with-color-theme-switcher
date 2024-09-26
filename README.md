@@ -32,13 +32,13 @@ Users should be able to:
 ### Screenshot
 
 - mobile light mode
-  ![mobile light mode](./screenshot.jpg)
+  ![mobile light mode](https://github.com/G-Gakii/REST-Countries-API-with-color-theme-switcher/blob/main/public/assets/screenshots/mobile-light.png)
 - mobile dark mode
-  ![mobile dark mode](./screenshot.jpg)
+  ![mobile dark mode](https://github.com/G-Gakii/REST-Countries-API-with-color-theme-switcher/blob/main/public/assets/screenshots/mobile-dark.png)
 - desktop dark mode
-  ![desktop dark mode](./screenshot.jpg)
+  ![desktop dark mode](https://github.com/G-Gakii/REST-Countries-API-with-color-theme-switcher/blob/main/public/assets/screenshots/desktop-dark.png)
 - desktop light mode
-  ![desktop light mode](./screenshot.jpg)
+  ![desktop light mode](https://github.com/G-Gakii/REST-Countries-API-with-color-theme-switcher/blob/main/public/assets/screenshots/desktop-light.png)
 
 ### Links
 
