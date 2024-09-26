@@ -1,0 +1,20 @@
+@import "../styles/variable.scss";
+.container {
+  // width: 100%;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  .component_container {
+    max-width: 2000px;
+  }
+}
+.dark {
+  background-color: $VeryDarkBlue;
+  color: $White;
+}
+.light {
+  background-color: $VeryLightGray;
+  color: $VeryDarkBlue;
+}

@@ -1,0 +1,43 @@
+<div class="country_detail_container" [ngClass]="{ dark: mode, light: !mode }">
+  <button class="btn" (click)="BackToHomePage()">&larr; Back</button>
+  <div class="country_detail_container_country">
+    <div class="image">
+      <img [src]="displayedcountry.flag" alt="flag" />
+    </div>
+    <div class="about_all">
+      <div class="about">
+        <div class="about_part1">
+          <h2>
+            <b>{{ displayedcountry.name }} </b>
+          </h2>
+          <p><b>Native name: </b>{{ displayedcountry.nativeName }}</p>
+          <p><b>Population:</b> {{ displayedcountry.population }}</p>
+          <p><b>Region:</b> {{ displayedcountry.region }}</p>
+          <p><b>Subregion:</b> {{ displayedcountry.subregion }}</p>
+          <p><b>Capital:</b> {{ displayedcountry.capital }}</p>
+        </div>
+        <div class="about_part2">
+          <p><b>Top level domain:</b> {{ displayedcountry.topLevelDomain }}</p>
+          <p><b>Currencies:</b> {{ displayedcountry.currencies[0].name }}</p>
+          <p>
+            <b>Language:</b>
+            @for (item of language; track $index) {
+            <span> {{ item }}, </span>
+            }
+          </p>
+        </div>
+      </div>
+      <p>
+        <b>Border Countries:</b> @for (item of displayedcountry.borders; track
+        $index) {
+          <div id="mybtn">
+            <button (click)="navigateToBorderCountry(item)">
+              {{ item }}
+            </button>
+          </div>
+        
+        }
+      </p>
+    </div>
+  </div>
+</div>

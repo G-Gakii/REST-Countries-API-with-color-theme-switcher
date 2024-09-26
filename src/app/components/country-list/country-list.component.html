@@ -1,0 +1,49 @@
+<div class="country_list_container" [ngClass]="{ dark: mode, light: !mode }">
+  <form action="">
+    <div class="search_bar">
+      <img src="assets/images/search.png" alt="" />
+      <input
+        type="text"
+        name="country"
+        id="country"
+        #country="ngModel"
+        placeholder="Search for a country..."
+        [(ngModel)]="selectedType.country"
+        (keyup)="searchCountryByName()"
+      />
+    </div>
+
+    <div class="continent">
+      <select
+        name="continent"
+        id="continent"
+        #continent="ngModel"
+        [(ngModel)]="selectedType.continent"
+        (change)="displayedCountriesByContinent()"
+      >
+        <option disabled selected value="">Filter by region</option>
+        @for (item of continents; track $index) {
+        <option value="{{ item }}">{{ item }}</option>
+        }
+      </select>
+    </div>
+  </form>
+
+  <div class="countries">
+    @for (item of mycountries; track $index) {
+
+    <div class="country" (click)="selectedCountryNavigate(item.numericCode)">
+      <div class="image">
+        <img [src]="item.flag" alt="flag" />
+      </div>
+      <div class="about">
+        <h3>{{ item.name }}</h3>
+        <p><b>Population:</b> {{ item.population }}</p>
+
+        <p><b>Region:</b> {{ item.region }}</p>
+        <p><b>Capital:</b> {{ item.capital }}</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>
