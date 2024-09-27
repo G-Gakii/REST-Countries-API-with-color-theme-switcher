@@ -2,13 +2,13 @@ import { Component, effect, OnInit } from '@angular/core';
 import { Countries } from '../../interface/countries';
 import { CountriesService } from '../../service/countries.service';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-country-detail',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NgOptimizedImage],
   templateUrl: './country-detail.component.html',
   styleUrl: './country-detail.component.scss',
 })

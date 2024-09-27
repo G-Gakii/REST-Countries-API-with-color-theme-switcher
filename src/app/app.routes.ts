@@ -9,6 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'country',
+    // component: CountryDetailComponent,
     loadComponent: () =>
       import('./components/country-detail/country-detail.component').then(
         (m) => m.CountryDetailComponent

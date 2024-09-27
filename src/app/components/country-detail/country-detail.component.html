@@ -2,7 +2,7 @@
   <button class="btn" (click)="BackToHomePage()">&larr; Back</button>
   <div class="country_detail_container_country">
     <div class="image">
-      <img [src]="displayedcountry.flag" alt="flag" />
+      <img [ngSrc]="displayedcountry.flag" width="500" height="400" priority alt="flag"  />
     </div>
     <div class="about_all">
       <div class="about">

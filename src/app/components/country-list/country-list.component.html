@@ -1,7 +1,13 @@
 <div class="country_list_container" [ngClass]="{ dark: mode, light: !mode }">
   <form action="">
     <div class="search_bar">
-      <img src="assets/images/search.png" alt="" />
+      <img
+        [ngSrc]="'assets/images/search.png'"
+        width="32"
+        height="32"
+        alt="search icon"
+        priority
+      />
       <input
         type="text"
         name="country"
@@ -34,7 +40,7 @@
 
     <div class="country" (click)="selectedCountryNavigate(item.numericCode)">
       <div class="image">
-        <img [src]="item.flag" alt="flag" />
+        <img [ngSrc]="item.flag" alt="flag" width="500" height="400" priority />
       </div>
       <div class="about">
         <h3>{{ item.name }}</h3>

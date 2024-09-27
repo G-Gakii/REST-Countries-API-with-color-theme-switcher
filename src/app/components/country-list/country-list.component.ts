@@ -1,14 +1,14 @@
 import { Component, effect, Input, OnInit } from '@angular/core';
 import { Countries } from '../../interface/countries';
 import { CountriesService } from '../../service/countries.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-country-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
+  imports: [CommonModule, FormsModule, RouterLink, NgOptimizedImage],
   templateUrl: './country-list.component.html',
   styleUrl: './country-list.component.scss',
 })
@@ -81,8 +81,7 @@ export class CountryListComponent implements OnInit {
     this.foundCountry = this.countries.find(
       (country) => country.numericCode === code
     );
-  
-  
+
     this.service.selectedCountry.set(this.foundCountry);
 
     this.router.navigate(['/country']);
